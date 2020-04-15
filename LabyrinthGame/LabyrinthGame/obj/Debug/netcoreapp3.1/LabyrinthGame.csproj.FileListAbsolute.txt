@@ -1,0 +1,13 @@
+C:\Users\User\Desktop\Учеба\ООП\Labyrinth game\LabyrinthGame\LabyrinthGame\bin\Debug\netcoreapp3.1\LabyrinthGame.exe
+C:\Users\User\Desktop\Учеба\ООП\Labyrinth game\LabyrinthGame\LabyrinthGame\bin\Debug\netcoreapp3.1\LabyrinthGame.deps.json
+C:\Users\User\Desktop\Учеба\ООП\Labyrinth game\LabyrinthGame\LabyrinthGame\bin\Debug\netcoreapp3.1\LabyrinthGame.runtimeconfig.json
+C:\Users\User\Desktop\Учеба\ООП\Labyrinth game\LabyrinthGame\LabyrinthGame\bin\Debug\netcoreapp3.1\LabyrinthGame.runtimeconfig.dev.json
+C:\Users\User\Desktop\Учеба\ООП\Labyrinth game\LabyrinthGame\LabyrinthGame\bin\Debug\netcoreapp3.1\LabyrinthGame.dll
+C:\Users\User\Desktop\Учеба\ООП\Labyrinth game\LabyrinthGame\LabyrinthGame\bin\Debug\netcoreapp3.1\LabyrinthGame.pdb
+C:\Users\User\Desktop\Учеба\ООП\Labyrinth game\LabyrinthGame\LabyrinthGame\obj\Debug\netcoreapp3.1\LabyrinthGame.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Учеба\ООП\Labyrinth game\LabyrinthGame\LabyrinthGame\obj\Debug\netcoreapp3.1\LabyrinthGame.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Учеба\ООП\Labyrinth game\LabyrinthGame\LabyrinthGame\obj\Debug\netcoreapp3.1\LabyrinthGame.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Учеба\ООП\Labyrinth game\LabyrinthGame\LabyrinthGame\obj\Debug\netcoreapp3.1\LabyrinthGame.AssemblyInfo.cs
+C:\Users\User\Desktop\Учеба\ООП\Labyrinth game\LabyrinthGame\LabyrinthGame\obj\Debug\netcoreapp3.1\LabyrinthGame.dll
+C:\Users\User\Desktop\Учеба\ООП\Labyrinth game\LabyrinthGame\LabyrinthGame\obj\Debug\netcoreapp3.1\LabyrinthGame.pdb
+C:\Users\User\Desktop\Учеба\ООП\Labyrinth game\LabyrinthGame\LabyrinthGame\obj\Debug\netcoreapp3.1\LabyrinthGame.genruntimeconfig.cache
