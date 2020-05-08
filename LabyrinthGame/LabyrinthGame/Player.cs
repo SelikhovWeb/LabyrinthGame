@@ -19,8 +19,8 @@ namespace LabyrinthGame
             this.y = y;
         }
 
-        Cell person = new Cell("person");
-        Cell empty = new Cell("empty");
+        Cell person = new Cell("person", "o");
+        Cell empty = new Cell("empty", " ");
       
         public void MoveRight()
         {
@@ -30,15 +30,17 @@ namespace LabyrinthGame
                 Program.exit = true;
                 return;
             }
-            if (Field.array[x, y + 1].Shape == "=>")
+            if (Field.array[x, y + 1].Type == "finish")
             {
                 y++;
                 Field.array[x, y] = person;
                 Field.array[x, y - 1] = empty;
                 
             }
-            if (Field.array[x, y + 1].Shape == "a")
+            if (Field.array[x, y + 1].Type == "key")
             {
+                string key = Field.array[x, y + 1].Shape;
+
                 keySound();
                 y++;
                 Field.array[x, y] = person;
@@ -47,14 +49,14 @@ namespace LabyrinthGame
                 {
                     for (int j = 0; j < colLength; j++)
                     {
-                        if (Field.array[i, j].Shape == "A")
+                        if (Field.array[i, j] is Door element && element.Key == key)
                         {
                             Field.array[i, j] = empty;
                         }
                     }
                 }
             }
-            if (Field.array[x, y + 1].Shape != "#" && Field.array[x, y + 1].Shape != "A" )
+            if (Field.array[x, y + 1].Type != "wall" && Field.array[x, y + 1].Type != "door" )
             {
                 y++;
                 Field.array[x, y] = person;
@@ -65,8 +67,10 @@ namespace LabyrinthGame
         }
         public void MoveLeft()
         {
-            if (Field.array[x, y - 1].Shape == "a")
+            if (Field.array[x, y - 1].Type == "key")
             {
+                string key = Field.array[x, y - 1].Shape;
+
                 keySound();
                 y--;
                 Field.array[x, y] = person;
@@ -75,7 +79,7 @@ namespace LabyrinthGame
                 {
                     for (int j = 0; j < colLength; j++)
                     {
-                        if (Field.array[i, j].Shape == "A")
+                        if (Field.array[i, j] is Door element && element.Key == key)
                         {
                             Field.array[i, j] = empty;
                         }
@@ -83,7 +87,7 @@ namespace LabyrinthGame
                 }
             }
 
-            if (Field.array[x, y - 1].Shape != "#" && Field.array[x, y - 1].Shape != "A")
+            if (Field.array[x, y - 1].Type != "wall" && Field.array[x, y - 1].Type != "door")
             {
                 y--;
                 Field.array[x, y] = person;
@@ -94,8 +98,10 @@ namespace LabyrinthGame
         }
         public void MoveDown()
         {
-            if (Field.array[x + 1, y].Shape == "a")
+            if (Field.array[x + 1, y].Type == "key")
             {
+                string key = Field.array[x + 1, y].Shape;
+
                 keySound();
                 x++;
                 Field.array[x, y] = person;
@@ -104,7 +110,7 @@ namespace LabyrinthGame
                 {
                     for (int j = 0; j < colLength; j++)
                     {
-                        if (Field.array[i, j].Shape == "A")
+                        if (Field.array[i, j] is Door element && element.Key == key)
                         {
                             Field.array[i, j] = empty;
                         }
@@ -112,7 +118,7 @@ namespace LabyrinthGame
                 }
             }
 
-            if (Field.array[x + 1, y ].Shape != "#" && Field.array[x + 1, y ].Shape != "A") { 
+            if (Field.array[x + 1, y ].Type != "wall" && Field.array[x + 1, y ].Type != "door") { 
                 x++;
             Field.array[x, y] = person;
             Field.array[x - 1, y] = empty;
@@ -123,8 +129,10 @@ namespace LabyrinthGame
         public void MoveUp()
         {
 
-            if (Field.array[x - 1, y].Shape == "a")
+            if (Field.array[x - 1, y].Type == "key")
             {
+                string key = Field.array[x - 1, y].Shape;
+
                 keySound();
                 x--;
                 Field.array[x, y] = person;
@@ -133,7 +141,7 @@ namespace LabyrinthGame
                 {
                     for (int j = 0; j < colLength; j++)
                     {
-                        if (Field.array[i, j].Shape == "A")
+                        if (Field.array[i, j] is Door element && element.Key == key)
                         {
                             Field.array[i, j] = empty;
                         }
@@ -141,7 +149,7 @@ namespace LabyrinthGame
                 }
             }
 
-            if (Field.array[x - 1, y].Shape != "#" && Field.array[x - 1, y ].Shape != "A")
+            if (Field.array[x - 1, y].Type != "wall" && Field.array[x - 1, y ].Type != "door")
             {
 
                 x--;
@@ -154,15 +162,15 @@ namespace LabyrinthGame
 
         public void keySound()
         {
-            Console.Beep(659, 60);
-            Console.Beep(659, 60);
-            Thread.Sleep(60);
-            Console.Beep(659, 60);
-            Thread.Sleep(167);
-            Console.Beep(523, 60);
-            Console.Beep(659, 60);
-            Thread.Sleep(60);
-            Console.Beep(784, 60);
+            //Console.Beep(659, 60);
+            //Console.Beep(659, 60);
+            //Thread.Sleep(60);
+            //Console.Beep(659, 60);
+            //Thread.Sleep(167);
+            //Console.Beep(523, 60);
+            //Console.Beep(659, 60);
+            //Thread.Sleep(60);
+            //Console.Beep(784, 60);
         }
     }
 }
