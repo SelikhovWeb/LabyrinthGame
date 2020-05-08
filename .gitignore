@@ -1,0 +1,6 @@
+.DS_Store
+
+/LabyrinthGame/.vs
+
+/LabyrinthGame/LabyrinthGame/obj/**
+/LabyrinthGame/LabyrinthGame/bin/*

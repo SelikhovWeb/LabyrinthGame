@@ -29,26 +29,26 @@ namespace LabyrinthGame
                         GameOver();
                         break;
                     case ConsoleKey.W:
-                        Console.Beep(270, 100);
+                        //Console.Beep(270, 100);
                         Player1.MoveUp();
                         Console.Clear();
                         f.PrintField();
 
                         break;
                     case ConsoleKey.S:
-                        Console.Beep(270, 100);
+                        //Console.Beep(270, 100);
                         Player1.MoveDown();
                         Console.Clear();
                         f.PrintField();
                         break;
                     case ConsoleKey.A:
-                        Console.Beep(270, 100);
+                        //Console.Beep(270, 100);
                         Player1.MoveLeft();
                         Console.Clear();
                         f.PrintField();
                         break;
                     case ConsoleKey.D:
-                        Console.Beep(270, 100);
+                        //Console.Beep(270, 100);
                         Player1.MoveRight();
                         if (Program.exit == true) {
 
