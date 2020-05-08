@@ -70,12 +70,12 @@ namespace LabyrinthGame
 
         }
 
-        static Cell w = new Cell("wall");
-        static Cell d = new Cell("door");
-        static Cell k = new Cell("key");
-        static Cell p = new Cell("person");
-        static Cell e = new Cell("empty");
-        static Cell f = new Cell("finish");
+        static Cell w = new Cell("wall", "#");
+        static Cell d = new Cell("door", "A");
+        static Cell k = new Cell("key", "a");
+        static Cell p = new Cell("person", "o");
+        static Cell e = new Cell("empty", " ");
+        static Cell f = new Cell("finish", "=>");
 
         public static Cell[,] array = new Cell[10, 20]
        {
@@ -91,23 +91,43 @@ namespace LabyrinthGame
             {w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w},
        };
     }
-    struct Cell
+    //struct Cell
+    //{
+    //    public string Shape;
+    //    public string Type;
+
+    //    public Cell(string type)
+    //    {
+    //        this.Type = type;
+    //        if (type == "wall") { this.Shape = "#"; }
+    //        else if (type == "door") { this.Shape = "A"; }
+    //        else if (type == "key") { this.Shape = "a"; }
+    //        else if (type == "person") { this.Shape = "o"; }
+    //        else if (type == "finish") { this.Shape = "=>"; }
+    //        else this.Shape = " ";
+    //    }
+
+
+    //}
+
+    class Structure
     {
-        public string Shape;
         public string Type;
 
-        public Cell(string type)
+        public Structure(string type)
         {
-            this.Type = type;
-            if (type == "wall") { this.Shape = "#"; }
-            else if (type == "door") { this.Shape = "A"; }
-            else if (type == "key") { this.Shape = "a"; }
-            else if (type == "person") { this.Shape = "o"; }
-            else if (type == "finish") { this.Shape = "=>"; }
-            else this.Shape = " ";
+            Type = type;
         }
+    }
 
+    class Cell : Structure
+    {
+        public string Shape;
 
+        public Cell(string shape, string type) : base(type)
+        {
+            Shape = shape;
+        }
     }
 
 }
