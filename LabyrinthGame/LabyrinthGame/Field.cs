@@ -71,8 +71,15 @@ namespace LabyrinthGame
         }
 
         static Cell w = new Cell("wall", "#");
-        static Cell d = new Cell("door", "A");
-        static Cell k = new Cell("key", "a");
+
+        static Cell aD = new Door("door", "A", "a");
+        static Door bD = new Door("door", "B", "b");
+        static Door cD = new Door("door", "C", "c");
+
+        static Cell aK = new Cell("key", "a");
+        static Cell bK = new Cell("key", "b");
+        static Cell cK = new Cell("key", "c");
+
         static Cell p = new Cell("person", "o");
         static Cell e = new Cell("empty", " ");
         static Cell f = new Cell("finish", "=>");
@@ -84,10 +91,10 @@ namespace LabyrinthGame
             {w, e, e, w, e, w, e, e, e, e, w, e, w, e, w, e, w, e, e, w},
             {w, e, e, w, w, w, w, e, w, e, e, w, e, e, e, e, w, w, w, w},
             {w, e, e, w, e, e, w, e, e, e, w, e, w, w, e, w, e, e, w, w},
-            {w, w, e, w, w, e, e, e, e, e, e, e, e, d, e, w, e, w, e, w},
+            {w, w, e, w, w, e, e, e, e, e, e, e, e, aD, e, w, e, w, e, w},
             {w, e, e, e, w, w, w, e, w, e, w, e, w, e, e, e, w, w, w, w},
-            {w, e, w, w, w, e, e, e, w, e, w, w, w, w, e, w, e, w, e, w},
-            {w, e, e, e, e, w, k, w, w, e, e, w, e, e, e, e, e, e, e, f},
+            {w, e, w, w, w, e, e, e, w, e, w, w, w, w, bD, w, e, w, e, w},
+            {w, e, e, e, bK, w, aK, w, w, e, cK, w, e, e, e, e, e, e, cD, f},
             {w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w},
        };
         public static Cell[,] array2 = new Cell[10, 20]
@@ -117,6 +124,7 @@ namespace LabyrinthGame
             {w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w},
        };
     }
+
     //struct Cell
     //{
     //    public string Shape;
@@ -136,23 +144,25 @@ namespace LabyrinthGame
 
     //}
 
-    class Structure
+    class Cell
     {
+        public string Shape;
         public string Type;
 
-        public Structure(string type)
+        public Cell(string type, string shape)
         {
+            Shape = shape;
             Type = type;
         }
     }
 
-    class Cell : Structure
+    class Door : Cell
     {
-        public string Shape;
+        public string Key;
 
-        public Cell(string shape, string type) : base(type)
+        public Door(string type, string shape, string key) : base(type, shape)
         {
-            Shape = shape;
+            Key = key;
         }
     }
 
