@@ -6,20 +6,25 @@ namespace LabyrinthGame
     class Program
     {
 
-
+        public static int MoveCounter = 0;
         public static bool exit = false;
+        
         static void Main(string[] args)
         {
-           
+            StartGame();
+        }
+
+        public static void StartGame()
+        {
             Player Player1 = new Player(1, 1);
             Field f = new Field();
             f.PrintField();
-
+            Timer.startTimer();
             ConsoleKeyInfo ck;
 
             do
             {
-               ck = Console.ReadKey(intercept: true);
+                ck = Console.ReadKey(intercept: true);
 
                 switch (ck.Key)
                 {
@@ -33,6 +38,9 @@ namespace LabyrinthGame
                         Player1.MoveUp();
                         Console.Clear();
                         f.PrintField();
+                        Console.WriteLine();
+                        Console.WriteLine("Last key: " + ck.Key);
+                        MoveCounter++;
 
                         break;
                     case ConsoleKey.S:
@@ -40,34 +48,50 @@ namespace LabyrinthGame
                         Player1.MoveDown();
                         Console.Clear();
                         f.PrintField();
+                        Console.WriteLine();
+                        Console.WriteLine("Last key: " + ck.Key);
+                        MoveCounter++;
+
+
                         break;
                     case ConsoleKey.A:
                         //Console.Beep(270, 100);
                         Player1.MoveLeft();
                         Console.Clear();
                         f.PrintField();
+                        Console.WriteLine();
+                        Console.WriteLine("Last key: " + ck.Key);
+                        MoveCounter++;
+
+
                         break;
                     case ConsoleKey.D:
                         //Console.Beep(270, 100);
                         Player1.MoveRight();
-                        if (Program.exit == true) {
+                        if (Program.exit == true)
+                        {
 
-                            break; }
+                            break;
+                        }
                         Console.Clear();
                         f.PrintField();
+                        Console.WriteLine();
+                        Console.WriteLine("Last key: " + ck.Key);
+                        MoveCounter++;
+
+
 
                         break;
                     default:
                         break;
                 }
-                
-            }
-            while (!exit );
-        }
 
+            }
+            while (!exit);
+        }
         public static void Finish()
         {
-
+            Timer.endTimer();
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("$$__$$__$$$$__$$__$$");
@@ -81,6 +105,9 @@ namespace LabyrinthGame
             Console.WriteLine("$$_$_$_$$__$$_$$_$$$___$$$");
             Console.WriteLine("$$$$$$_$$__$$_$$__$$");
             Console.WriteLine("_$$_$$__$$$$__$$__$$___$$$");
+            Console.WriteLine("");
+            Console.WriteLine("You made " + MoveCounter + " moves.");
+            Timer.printTimer();
             SuperMario();
         }
 
@@ -310,29 +337,7 @@ namespace LabyrinthGame
             Thread.Sleep(125);
             Console.Beep(698, 125);
             Console.Beep(698, 125);
-            Thread.Sleep(625);
-            Console.Beep(784, 125);
-            Console.Beep(740, 125);
-            Console.Beep(698, 125);
-            Thread.Sleep(42);
-            Console.Beep(622, 125);
-            Thread.Sleep(125);
-            Console.Beep(659, 125);
-            Thread.Sleep(167);
-            Console.Beep(415, 125);
-            Console.Beep(440, 125);
-            Console.Beep(523, 125);
-            Thread.Sleep(125);
-            Console.Beep(440, 125);
-            Console.Beep(523, 125);
-            Console.Beep(587, 125);
-            Thread.Sleep(250);
-            Console.Beep(622, 125);
-            Thread.Sleep(250);
-            Console.Beep(587, 125);
-            Thread.Sleep(250);
-            Console.Beep(523, 125);
-            Thread.Sleep(625);
+           
         }
     }
 

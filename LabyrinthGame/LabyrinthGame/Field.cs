@@ -90,6 +90,32 @@ namespace LabyrinthGame
             {w, e, e, e, e, w, k, w, w, e, e, w, e, e, e, e, e, e, e, f},
             {w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w},
        };
+        public static Cell[,] array2 = new Cell[10, 20]
+       {
+            {w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w},
+            {w, p, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, w},
+            {w, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, w},
+            {w, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, w},
+            {w, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, w},
+            {w, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, w},
+            {w, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, w},
+            {w, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, w},
+            {w, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, f},
+            {w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w},
+       };
+        public static Cell[,] array3 = new Cell[10, 20]
+       {
+            {w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w},
+            {w, p, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, w},
+            {w, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, w},
+            {w, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, w},
+            {w, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, w},
+            {w, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, w},
+            {w, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, w},
+            {w, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, w},
+            {w, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, f},
+            {w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w, w},
+       };
     }
     //struct Cell
     //{
